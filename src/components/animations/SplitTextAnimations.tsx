@@ -21,7 +21,7 @@ const SplitTextAnimations = () => {
               end: "bottom 60%",
               scrub: false,
               markers: false,
-              toggleActions: "play none none none",
+              toggleActions: "play none resume reset",
             },
           });
 

@@ -21,7 +21,7 @@ const NavbarContainerTwo = () => {
 
   return (
     <div className="relative w-full">
-      <DeskTopNavbarTwo scrollHight={scrollHight} />
+      <DeskTopNavbarTwo/>
       <MobileNavbar
        
         scrollHight={scrollHight}

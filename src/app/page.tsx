@@ -27,7 +27,6 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div>
-       <NavbarContainerTwo />
       {/* <BannerOne /> */}
       <HomeThreeBanner />
       <HomeThreeAbout/>
@@ -41,7 +40,6 @@ export default function Home() {
       {/* <HomeOneFaq /> */}
       <HomeOneInfo />
       <HomeOneRecentBlog />
-      <Footer />
       <Animations />
     </div>
   );

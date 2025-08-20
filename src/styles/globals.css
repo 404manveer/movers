@@ -136,6 +136,9 @@ body {
   .sp60px {
     @apply p-8 md:p-10 xl:p-12 xxl:p-15;
   }
+  .sp32px{
+    @apply p-4 md:p-5 xl:p-6 xxl:p-8
+  }
   .spt60px {
     @apply pt-8 md:pt-10 xl:pt-12 xxl:pt-15;
   }
@@ -334,7 +337,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #005655;
+  background-color: #562f00;
   border-radius: 10px;
   width: 2px;
 }

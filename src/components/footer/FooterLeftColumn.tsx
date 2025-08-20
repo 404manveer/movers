@@ -1,4 +1,4 @@
-import logo from "@/../public/images/home-one/footer-logo.png";
+import logo from "@/../public/img/logo/interstate logo v4-01.png";
 import {
   IconBrandDiscord,
   IconBrandFacebook,
@@ -14,8 +14,7 @@ const FooterLeftColumn = () => {
     <div className="flex-1">
       <Image src={logo} width={416} height={80} alt="Footer Logo" />
       <p className="m-text text-balance text-white-3">
-        Highlights the impact of technology on the banking industry, enabling
-        convenient digital access to financial services.
+     
       </p>
       <div className="smt40px flex items-center gap-3">
         <Link

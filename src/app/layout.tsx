@@ -12,6 +12,8 @@ import "swiper/css/bundle";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import NavbarContainerTwo from "@/components/navbar/NavbarContainerTwo";
+import Footer from "@/components/footer/Footer";
 
 // export const metadata: Metadata = {
 //   title: "Babuz - Banking Solutions for Businesses NextJs Template",
@@ -32,8 +34,14 @@ export default function RootLayout({
       <body className={`font-kanit ${kanit.variable} relative text-black-4`}>
   <Provider store={store}>
         <main>
+          
+          
+             <NavbarContainerTwo />
           <div className="relative">{children}</div>
+           <Footer />
+           
           <ScrollProgressButton />
+
         </main>
   </Provider>
       </body>

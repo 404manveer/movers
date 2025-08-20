@@ -47,14 +47,14 @@ export default function OurWorks() {
         />
       <div className="grid grid-cols-1  lg:grid-cols-4 md:grid-cols-2 items-center justify-center">
           {steps.map((item, index) => (
-         <div className={` ${index % 2 ===0? "mt-0":" mt-30"} ${index % 2 ===0? "mt-0":" lg:mt-80"}`}>
+         <div className={` `}>
              <OurWorkCard
             key={index}
             step={item.step}
             heading={item.heading}
             iconname={item.iconname}
             text={item.text}
-            className={` mx-auto ` }
+            className={`  ${index % 2 === 0? "":"mt-30"} ` }
           />
          </div>
         ))}

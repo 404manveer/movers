@@ -8,9 +8,9 @@ export default function RootLayout({
 }) {
   return (
     <div className="relative">
-      <NavbarContainerThree />
+      {/* <NavbarContainerThree /> */}
       {children}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

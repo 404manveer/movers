@@ -9,16 +9,16 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { navbarData } from "../../../public/data/navbarData";
+// import { navbarData } from "../../../public/data/navbarData";
+import { navbar } from "../../../public/data/navbar";
 
-const DeskTopNavbarTwo = ({ scrollHight }: { scrollHight: number }) => {
+const DeskTopNavbarTwo = () => {
   const pathName = usePathname();
 
   return (
     <div
-      className={cn(" fixed  top-0 z-50 w-full ", {
-        "theme-transition- bg-white-1 shadow-sm": scrollHight > 50,
-      })}
+      className={cn(" fixed  top-0 z-50 w-full theme-transition- bg-white-1 shadow-sm"
+      )}
     >
       <div
         className="transition-primary spy24px theme-transition-3 mx-auto hidden
@@ -31,7 +31,7 @@ const DeskTopNavbarTwo = ({ scrollHight }: { scrollHight: number }) => {
         </div>
 
         <ul className="flex items-center justify-between gap-10">
-          {navbarData.map(({ id, menuTitle, path, menuItems }) => {
+          {navbar.map(({ id, menuTitle, path, menuItems }) => {
             let isActive = menuItems?.some(
               (path) => pathName == path.menuItemPath,
             );
@@ -88,10 +88,8 @@ const DeskTopNavbarTwo = ({ scrollHight }: { scrollHight: number }) => {
           <Link
             href={`/login`}
             className={cn(
-              "l-text theme-transition-3 flex items-center gap-1 text-white-1 hover:text-accent-3",
-              {
-                "text-black-4": scrollHight > 50,
-              },
+              "l-text theme-transition-3 flex items-center gap-1  hover:text-accent-3  text-black-4"
+            
             )}
           >
             <IconLock />
