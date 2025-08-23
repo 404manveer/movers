@@ -25,10 +25,10 @@ useEffect(() => {
 
   return (
     <div className="place-form">
-      <h2 className="text-xl font-semibold">Tell us a bit about your place</h2>
-      <p className="text-sm text-gray-600">This helps us estimate your move size.</p>
+      <h2 className="h2 ">Tell us a bit about your place</h2>
+      <p className="h6 text-gray-400">This helps us estimate your move size.</p>
 
-      <p className="mt-6">Number of bedrooms</p>
+      <p className="h5 mt-6">Number of bedrooms</p>
       <div className="flex gap-4 mt-4">
         {bedrooms.map((bedroom, index) => {
          

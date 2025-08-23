@@ -20,7 +20,7 @@ const LinkPrimary = ({
     <Link
       href={`${link}`}
       className={cn(
-        "spy12px spx24px l-text group relative inline-flex items-center justify-center overflow-hidden bg-primary p-4 px-6 py-3  text-white-4 shadow-md transition duration-300 ease-out",
+        "spy12px spx24px l-text group relative inline-flex items-center justify-center overflow-hidden  p-4 px-6 py-3  text-white-4 shadow-md transition duration-300 ease-out",
         className,
       )}
     >

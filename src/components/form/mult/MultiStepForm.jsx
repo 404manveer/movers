@@ -9,6 +9,9 @@ import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Stepper from "../stepper/stepper";
+import Button from "../../link/Button";
+import Backbutton from "@/components/link/Backbutton";
+
 import {
   setAddress,
   setProperty,
@@ -114,15 +117,21 @@ export default function MultiStepForm() {
 
   return (
     <>
-      <div className=" w-full">
-        {/* <header className=" fixed">
-   <Stepper step={step} currentStep={currentStep} setCurrentStep={setCurrentStep} className=" " />
-
-  </header> */}
-
-        <div className=" mt-20 grid grid-cols-[4fr_2fr]">
-          <main className="multi-step-form rounded-md border p-6 ">
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+      <div className=" w-full  p-4 lg:p-20 ">
+        <div className="container mt-20  grid grid-cols-1  gap-10 lg:grid-cols-[4fr_2fr]">
+          <main className="multi-step-form innershadow relative  rounded-md p-6 ">
+            <header className="absolute top-10">
+              <Stepper
+                step={step}
+                currentStep={currentStep}
+                setCurrentStep={setCurrentStep}
+                className=" hidden xl:flex transition-all duration-300 ease-linear "
+              />
+            </header>
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="lg:mt-20 space-y-6 "
+            >
               <CurrentComponent
                 register={register}
                 errors={errors}
@@ -131,38 +140,28 @@ export default function MultiStepForm() {
               />
               <div className=" flex gap-8">
                 {currentStep > page.Address && (
-                  <button
-                    className="btn hover:bg-[var(--primary)]"
-                    onClick={backHandler}
-                    type="button"
-                  >
-                    Back
-                  </button>
+                  <Backbutton text="Back" type="button" onClick={backHandler} />
+                  // <Button text='back' type="button" onClick={backHandler}  />
                 )}
-                <button
-                  type="submit"
-                  className=" btn hover:bg-[var(--primary)]"
-                >
-                  {buttonText}
-                </button>
+                <Button type="submit" text={`${buttonText}`} />
               </div>
             </form>
           </main>
 
-          <aside>
+          <aside className=" hidden lg:block sticky top-30 h-fit self-start">
             {formData?.address.PickupAddress ? (
-              <div className=" mx-auto w-[25rem] border p-8 ">
-                <span>Your move</span>
-                <h3>Pickup & delivery</h3>
-                <div className="pick mt-6">
+              <div className=" innershadow  mx-auto w-[25rem] p-8 ">
+                <span className="h4">Your move</span>
+                <h3 className="h5">Pickup & delivery</h3>
+                <div className="pick mt-3">
                   {formData?.address?.PickupAddress && (
-                    <h3 className=" address text-[18px] ">
+                    <h3 className=" address h5 ">
                       {formData.address.PickupAddress}
                     </h3>
                   )}
                   <div className=" mx-4">
                     {formData?.property?.property && (
-                      <span className=" mr-4">
+                      <span className="  mr-4">
                         {formData.property.property}
                       </span>
                     )}{" "}
@@ -185,56 +184,68 @@ export default function MultiStepForm() {
                         ),
                       )}
 
-                      {formData?.placeDescription?.placeDescription?.street.map((p,index)=>(
-                        <span  key={index} className=" inline-block mr-4 bg-zinc-300 px-5 py-.5 rounded-[3px] mt-3  " >{p}</span>
-                      ))
-                      }
-
-                    </h4>
-                  </div>
-                </div>
-
-                <div className="delivery mt-6   border-b-2 border-black-1 pb-4">
-                  {formData?.movingAddress?.movingAddress && 
-                    <h3 className=" address text-[18px] ">
-                      {formData.movingAddress.movingAddress}
-                    </h3>
-                  }
-
-                   <div className=" mx-4">
-                    
-                    <h4 className="place">
-                      {formData?.movingPlaceDescription?.movingPlaceDescription?.place?.map(
+                      {formData?.placeDescription?.placeDescription?.street.map(
                         (p, index) => (
                           <span
                             key={index}
-                            className="mr-4 mt-3 inline-block rounded-[3px] bg-zinc-300 px-5 py-0.5"
+                            className=" py-.5 mr-4 mt-3 inline-block rounded-[3px] bg-zinc-300 px-5  "
                           >
-                            {p === "Stairs"
-                              ? `Stairs-${formData?.movingPlaceDescription?.movingPlaceDescription?.stairs} Flights `
-                              : p}
+                            {p}
                           </span>
                         ),
                       )}
-
-                      {formData?.movingPlaceDescription?.movingPlaceDescription?.street.map((p,index)=>(
-                        <span key={index} className=" inline-block mr-4 bg-zinc-300 px-5 py-.5 rounded-[3px] mt-3  " >{p}</span>
-                      ))
-                      
-                      }
                     </h4>
                   </div>
                 </div>
 
+                {formData?.movingAddress?.movingAddress && (
+                  <div className="delivery mt-6   border-b-2 border-black-1 pb-4">
+                    {formData?.movingAddress?.movingAddress && (
+                      <h3 className=" address text-[18px] ">
+                        {formData.movingAddress.movingAddress}
+                      </h3>
+                    )}
 
-                <div className="date">
-                  {formData?.calendar?.dates && 
-                  <div className="flex justify-between">
-                    <span className="">Pickup date</span>
-                    <span>{formData?.calendar?.dates}</span>
-                    
-                    </div>}
-                </div>
+                    <div className=" mx-4">
+                      <h4 className="place">
+                        {formData?.movingPlaceDescription?.movingPlaceDescription?.place?.map(
+                          (p, index) => (
+                            <span
+                              key={index}
+                              className="mr-4 mt-3 inline-block rounded-[3px] bg-zinc-300 px-5 py-0.5"
+                            >
+                              {p === "Stairs"
+                                ? `Stairs-${formData?.movingPlaceDescription?.movingPlaceDescription?.stairs} Flights `
+                                : p}
+                            </span>
+                          ),
+                        )}
+
+                        {formData?.movingPlaceDescription?.movingPlaceDescription?.street.map(
+                          (p, index) => (
+                            <span
+                              key={index}
+                              className=" py-.5 mr-4 mt-3 inline-block rounded-[3px] bg-zinc-300 px-5  "
+                            >
+                              {p}
+                            </span>
+                          ),
+                        )}
+                      </h4>
+                    </div>
+                  </div>
+                )}
+
+                {formData?.calendar?.dates && (
+                  <div className="date">
+                    {formData?.calendar?.dates && (
+                      <div className="flex justify-between">
+                        <span className="">Pickup date</span>
+                        <span>{formData?.calendar?.dates}</span>
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
             ) : (
               ""

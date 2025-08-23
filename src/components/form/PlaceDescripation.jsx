@@ -66,12 +66,12 @@ export default function PlaceDescription({ register, errors, setValue, getValues
   };
 return (
     <div className="place-description-form">
-      <h2>Describe the access to your {moving} property</h2>
-      <p>Select all that apply and give details where possible.</p>
+      <h2 className="h2">Describe the access to your {moving} property</h2>
+      <p className=" text-zinc-400" >Select all that apply and give details where possible.</p>
 
       {/* PLACE SECTION */}
-      <section className="place mt-10">
-        <span>Your place</span>
+      <section className="place mt-6">
+        <span className=" h5" >Your place</span>
         <div className="flex gap-4 mt-4 flex-wrap">
           {place.map((item, index) => (
             <div
@@ -98,9 +98,9 @@ return (
                 min={1}
                 className="border-b outline-0 pb-1 border-black"
               />
-              <span className="relative group inline-block size-6 text-[14px] text-white text-center rounded-full bg-gray-400 cursor-pointer">
+              <span className="relative group inline-block size-6 text-[14px] text-white-1 text-center rounded-full bg-gray-400 cursor-pointer">
                 i
-                <span className="hidden group-hover:block absolute top-1/2 left-full ml-2 -translate-y-1/2 whitespace-nowrap bg-white text-black border p-1 rounded shadow">
+                <span className="hidden group-hover:block absolute w-96  text-wrap top-1/2 left-full ml-2 -translate-y-1/2 whitespace-nowrap bg-white text-black-1 border p-1 rounded shadow">
                   A flight of stairs (8 or more steps) is a set of steps that connects one level, floor, or landing to another.
                 </span>
               </span>
@@ -113,8 +113,8 @@ return (
       </section>
 
       {/* STREET SECTION */}
-      <section className="street mt-10">
-        <span>Your street</span>
+      <section className="street mt-6">
+        <span className="h5 ">Your street</span>
         <div className=" flex flex-wrap gap-4 mt-4">
           {street.map((item, index) => (
             <div

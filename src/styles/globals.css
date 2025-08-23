@@ -8,13 +8,9 @@
 :root{
   --primary:#F39740;
   --secondary:#09307B;
+  --primary-light:#f9d0aa;
 }
-.bg-prim {
-  background-color: #F39740 !important;
-}
-.bg-sec {
-  background-color: #09307B !important;
-}
+
 .work{
   position: relative;
 }
@@ -63,11 +59,27 @@ body {
   font-family: var(--body-font);
 }
 
+.innershadow{
+  /* box-shadow: inset 0 -4px -6px red; */
+  /* box-shadow: inset 0 4px 6px rgba(0,0,0,0.2); */
+  /* box-shadow: inset -4px 0 6px rgba(0,0,0,0.2); */
+  /* box-shadow: inset 0 -4px 6px rgba(0,0,0,0.2); */
+  box-shadow:  0px 2px 20px rgba(0, 0, 0, 0.1);
 
+}
 
 @layer utilities {
   .container {
     @apply mx-auto max-w-[540px] max-sm:px-2 md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] xxl:max-w-[1296px];
+  }
+  .bg-prim{
+    @apply bg-[var(--primary)]
+  }
+  .bg-sec{
+    @apply bg-[var(--secondary)]
+  }
+  .flex-center{
+    @apply flex items-center justify-center
   }
 
   /*================ typography classes start ================ */

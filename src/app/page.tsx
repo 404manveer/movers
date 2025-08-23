@@ -18,10 +18,11 @@ import { Metadata } from "next";
 import HomeThreeService from "@/pages/home-three/HomeThreeService";
 import HomeThreeAbout from "@/pages/home-three/HomeThreeAbout";
 import OurWorks from "@/pages/home-three/OurWorks"
+import HomeService from "@/pages/home-three/HomeService";
 
 export const metadata: Metadata = {
-  title: "Home One - Banking Solutions for Businesses NextJs Template",
-  description: "Banking Solutions for Businesses NextJs Template",
+  title: "Interstate removalists",
+  description: "Providing the solution for relocations.",
 };
 
 export default function Home() {
@@ -30,7 +31,8 @@ export default function Home() {
       {/* <BannerOne /> */}
       <HomeThreeBanner />
       <HomeThreeAbout/>
-      <HomeThreeService/>
+      <HomeService/>
+      {/* <HomeThreeService/> */}
       <OurWorks/>
       {/* <HomeOneService /> */}
       <HomeOneFinancialPlanning />

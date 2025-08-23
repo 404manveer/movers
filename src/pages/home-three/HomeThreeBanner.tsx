@@ -7,7 +7,7 @@ import HomeThreeBannerSideElement from "./HomeThreeBannerSideElement";
 const HomeThreeBanner = () => {
   return (
     <section className="fade-wrapper homebanner relative overflow-hidden bg-sec bg-[url('https://plus.unsplash.com/premium_photo-1661410909722-e8a052143117?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bW92ZXJ8ZW58MHx8MHx8fDA%3D')] bg-cover bg-center  object-cover pt-[108px] md:m-5  md:mt-25 md:rounded-3xl before:absolute before:inset-0 before:bg-black-1/60  xxl:mx-6">
-      <div className="container relative  p-20 text-white-1 sm:pt-25">
+      <div className="container relative  p-20 text-white-1 sm:pt-25 ">
          
         <div className="grid grid-cols-12 place-items-center">
           <div className="max-md:spt60px max-4xl:spb120px col-start-1 col-end-13  text-center   ">
@@ -27,18 +27,8 @@ const HomeThreeBanner = () => {
               <HomeThreeBannerLink href="/pick-details">Know Prices </HomeThreeBannerLink>
             </div>
           </div>
-      
-          {/* <div className="fade-top col-start-1 col-end-13 max-md:row-start-1 md:col-start-7">
-            <Image
-              src="https://plus.unsplash.com/premium_photo-1661410909722-e8a052143117?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bW92ZXJ8ZW58MHx8MHx8fDA%3D"
-              width={885}
-              height={669}
-              alt="banner image"
-              className="4xl:max-w-[unset]"
-            />
-          </div> */}
         </div>
-        {/* <HomeThreeBannerSideElement /> */}
+   
       </div>
     </section>
   );

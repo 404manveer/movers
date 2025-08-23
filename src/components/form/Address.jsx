@@ -7,14 +7,14 @@ export default function Address({ register, errors,moving }) {
   const currentAddress = moving ==="from" ? 'address' : 'movingAddress';
 
   return (
-    <div className="address-form">
-      <h2>Where are you moving {moving} ?</h2>
-      <p>Please tell us the exact address you're moving {moving}</p>
+    <div className="address-form w-full">
+      <h2 className="h2 ">Where are you moving {moving} ?</h2>
+      <p className=" text-zinc-500">Please tell us the exact address you're moving {moving}</p>
       <div className="flex flex-col items-start gap-8">
         <input
           {...register(Feildname, { required: "Pickup address is required" })}
           defaultValue={currentAddress?.Feildname || ""}
-          className="w-120 border-zinc-600 border p-1 mt-6"
+          className="placeholder:m-text  bg-white-4 mt-6 w-[70%] px-5 py-3 placeholder:text-black-3"
           placeholder="Pickup address"
         />
         {errors[Feildname] && (

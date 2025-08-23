@@ -1,9 +1,11 @@
 import Form from '@/components/form/mult/MultiStepForm';
+import Animations from "@/components/animations/Animations";
 
 export default function MultiStepForm() {
     return(
-        <div className=' flex items-start p-10  '>
+        <div>
          <Form />
+         <Animations/>
         </div>
     )
 }
