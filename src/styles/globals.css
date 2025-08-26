@@ -20,6 +20,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .work .icon-box::before{
   content: '';
   width: calc(100% + 30px);
@@ -469,8 +470,13 @@ body {
     -1px -1px 0 #000;
 }
 
-.info-card:hover .text-outline {
+.info-card:hover  {
   color: #121212 !important;
+  text-shadow: none;
+}
+
+.text-outline:hover{
+  color: var(--secondary);
   text-shadow: none;
 }
 

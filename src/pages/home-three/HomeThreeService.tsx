@@ -53,7 +53,7 @@ const sliderData = [
   {
     icon: <IconDiscountCheck className="size-10" />,
     title: "Affordable Pricing",
-    text: "Affordable and cost-effective moving packages with complete transparency and absolutely no hidden charges.",
+    text: "Affordable and cost-effective moving packages with complete transparency.",
   },
   {
     icon: <IconMap2 className="size-10" />,
@@ -66,29 +66,29 @@ const sliderData = [
 
 const HomeThreeService = () => {
   return (
-    <section className="spy120px fade-wrapper relative z-10 bg-secondary text-white-1">
-      <div className=" container  relative grid grid-cols-12 items-center">
-        <div className="col-start-1 col-end-13 lg:col-end-6">
-          <SectionSubTitle text="Our Services" className="text-white-1" />
-          <SectionTitle text="Comprehensive Moving Solutions" className="h2 mt-3" />
+    <section className="spy120px fade-wrapper relative z-10 bg-zinc-100 text-black">
+      <div className=" container  relative grid grid-cols-12 gap-12 items-center">
+        <div className="col-start-1 col-end-13 flex flex-col items-center justify-center border">
+          <SectionSubTitle text="Our Services" className="" />
+          <SectionTitle text="Comprehensive Moving Solutions" className="h1 mt-3" />
           <SectionText
             text="We specialize in interstate relocations, offering packing, loading, transport, and unpacking services to make your move stress-free."
-            className="fade-top mt-5 text-white-2"
+            className="fade-top mt-5 "
           />
-          <SectionText
+          {/* <SectionText
             text="We use modern tools and real-time tracking, giving you complete visibility and peace of mind throughout your relocation journey."
             className="fade-top mt-4 text-white-2"
-          />
-          <div className="spt40px flex items-center justify-between">
+          /> */}
+          {/* <div className="spt40px flex border items-start justify-between">
             <RoundedLink
               buttonText="All Services"
               link="/services"
               className="bg-[var(--primary)] text-black-4 hover:border-[var(-primary)]"
             />
            
-          </div>
+          </div> */}
         </div>
-        <div className="max-lg:spt40px col-start-1 col-end-13 lg:col-start-7">
+        <div className="max-lg:spt40px   col-start-1 col-end-13 ">
           <Swiper
             spaceBetween={24}
             speed={1400}
@@ -117,21 +117,21 @@ const HomeThreeService = () => {
                 slidesPerView: 2,
               },
               1200: {
-                slidesPerView: 2,
+                slidesPerView: 3,
               },
               1400: {
-                slidesPerView: 2,
+                slidesPerView: 3,
               },
             }}
           >
             {sliderData.map((item, index) => (
               <SwiperSlide key={`team-card${index}`}>
-                <HomeThreeServiceCard {...item} />
+                <HomeThreeServiceCard {...item} className="text-black bg-white-1  " />
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
-        <div className="swiper-pagination !absolute !-bottom-10 !left-1/2 !flex !w-fit !items-center !gap-2 max-xl:!-translate-x-1/2 xl:!bottom-15 xl:!left-[calc(50%-250px)]"></div>
+        <div className="swiper-pagination !absolute !-bottom-10 !left-1/2 !flex !w-fit !items-center !gap-2 max-xl:!-translate-x-1/2 xl:!-bottom-12 xl:!left-[calc(50%-80px)]"></div>
       </div>
   
     </section>

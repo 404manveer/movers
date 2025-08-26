@@ -15,17 +15,17 @@ const HomeThreeServiceCard = ({ title, text, className, icon }: Props) => {
   return (
     <div
       className={cn(
-        "group theme-transition-3 relative border border-white-1 hover:border-[var(--primary)] p-8 text-white-1 hover:bg-[var(--primary)] hover:text-black-4",
+        "group theme-transition-3 relative  border border-white-1 hover:border-[var(--primary)] p-8 text-white-1 hover:bg-[var(--primary)] hover:text-black-4",
         className,
       )}
     >
-      {icon}
+     <div className="text-[var(--primary)] group-hover:text-black-2 "  > {icon}</div>
       <h5 className="h5 spt24px font-medium group-hover:text-black-4">
         {title}
       </h5>
       <SectionText
         text={text}
-        className="mt-3 text-balance text-white-1 group-hover:text-black-2"
+        className="mt-3 text-balance  group-hover:text-black-2"
       />
       <Link
         href={`/services`}

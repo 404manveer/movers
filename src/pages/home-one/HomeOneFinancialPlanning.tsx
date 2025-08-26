@@ -20,7 +20,7 @@ const cardData = [
       "A removalist truck and two men (depending on the size of your move) will come to collect and deliver your items.",
   },
   {
-     image:image1,
+     image:image2,
     link:"#",
     cardTitle: "Online booking",
     cardText:
@@ -86,7 +86,7 @@ const HomeOneFinancialPlanning = () => {
         <div className="spt60px grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {cardData.map((data, index) => (
             <HomeOneFinancialCard
-              key={data.cardTitle}
+              key={index}
               {...data}
               handleHover={handleHover}
               isHover={isHover}

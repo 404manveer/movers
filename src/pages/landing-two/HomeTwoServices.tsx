@@ -32,7 +32,7 @@ const HomeTwoServices = () => {
             <LInkArrowTwo linkText="All Services" link="/services" />
           </div>
         </div>
-        <div className="max-lg:spt40px col-start-1 col-end-13 grid max-lg:gap-3 xs:grid-cols-2 lg:col-start-7">
+        <div className="max-lg:spt40px col-start-1 col-end-13 grid max-lg:gap-3 rounded-sm overflow-hidden xs:grid-cols-2 lg:col-start-7">
           <HomeTwoServiceCard
             icon={<IconPresentation className="size-10" />}
             title="Boost your Payments"

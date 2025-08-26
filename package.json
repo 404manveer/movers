@@ -13,6 +13,7 @@
     "@reduxjs/toolkit": "^2.8.2",
     "@studio-freight/hamo": "^0.6.28",
     "@studio-freight/react-lenis": "^0.0.43",
+    "@svgr/webpack": "^8.1.0",
     "@tabler/icons-react": "^2.46.0",
     "@types/react-modal-video": "^1.2.3",
     "@types/uuid": "^9.0.7",

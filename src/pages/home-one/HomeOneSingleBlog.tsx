@@ -6,7 +6,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 type Props = {
-  image: StaticImageData;
+  image: string;
   date: string;
   title: string;
   text: string;
@@ -30,7 +30,7 @@ const HomeOneSingleBlog = ({
           width={306}
           height={450}
           alt="Blog image one"
-          className="reveal-img parallax-img relative inline-block"
+          className="reveal-img parallax-img w-[306px] h-[450px] object-contain relative inline-block"
         />
       </div>
       <div className="sp24px bottom-0 left-[220px] max-w-[416px] bg-white-1 shadow-custom2 max-xl:h-fit xl:absolute">

@@ -28,14 +28,14 @@ const HomeOneRecentBlog = () => {
         </div>
         <div className="spt60px grid  items-center gap-6 xl:grid-cols-2">
           <HomeOneSingleBlog
-            image={blogImage1}
+            image={'https://plus.unsplash.com/premium_photo-1664366737698-3a98169201c3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGdpcmx8ZW58MHx8MHx8fDA%3D'}
             date="Latest News December 12, 2022"
             title="The future of fraud protection."
             text="Morbi eget venenatis lorem, id viverra massa. Etiam congue efficitur velit vel pharetra."
             link="/blog-details"
           />
           <HomeOneSingleBlog
-            image={blogImage2}
+            image={"https://images.unsplash.com/photo-1602233158242-3ba0ac4d2167?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybHxlbnwwfHwwfHx8MA%3D%3D"}
             date="Latest News December 12, 2022"
             title="Digital Banking Services "
             text="Morbi eget venenatis lorem, id viverra massa. Etiam congue efficitur velit vel pharetra."

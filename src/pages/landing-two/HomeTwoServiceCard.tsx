@@ -15,7 +15,7 @@ const HomeTwoServiceCard = ({ title, text, className, icon }: Props) => {
   return (
     <div
       className={cn(
-        "spx40px group theme-transition-3 relative py-10 sm:py-15 xxl:pb-[105px] xxl:pt-15 text-black-4",
+        "spx40px group theme-transition-3 relative py-10 sm:py-15 xxl:pb-[105px] xxl:pt-15 text-black-4 ",
         className,
       )}
     >

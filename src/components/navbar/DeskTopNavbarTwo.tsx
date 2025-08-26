@@ -37,7 +37,8 @@ const DeskTopNavbarTwo = () => {
             );
             return menuItems ? (
               <li key={`${id}`} className="group relative">
-                <p
+                <Link
+                href={`${path}`}
                   className={cn(
                     "theme-transition-3 relative z-10 flex cursor-pointer items-center justify-between gap-1 text-black-4 before:theme-transition-3 before:absolute before:bottom-0  before:block before:h-px before:w-0 before:bg-primary hover:text-primary hover:before:w-full",
                     isActive && "text-primary before:w-full before:bg-primary",
@@ -46,7 +47,7 @@ const DeskTopNavbarTwo = () => {
                   {" "}
                   <span className="l-text">{menuTitle}</span>
                   <IconChevronDown stroke="2" />
-                </p>
+                </Link>
 
                 <ul
                   data-lenis-prevent
@@ -85,7 +86,7 @@ const DeskTopNavbarTwo = () => {
         </ul>
 
         <div className="flex gap-8">
-          <Link
+          {/* <Link
             href={`/login`}
             className={cn(
               "l-text theme-transition-3 flex items-center gap-1  hover:text-accent-3  text-black-4"
@@ -94,7 +95,7 @@ const DeskTopNavbarTwo = () => {
           >
             <IconLock />
             <span>Login</span>
-          </Link>
+          </Link> */}
           <Link
             href={`/pick-details`}
             className={cn(

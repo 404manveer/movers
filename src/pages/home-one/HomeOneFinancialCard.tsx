@@ -27,9 +27,10 @@ const HomeOneFinancialCard = ({
     <div
       onMouseEnter={() => handleHover(index)}
       className={cn(
-        "sp32px till-card group theme-transition-3 bg-white-1 shadow-custom1 hover:bg-primary",
+        "sp32px till-card group theme-transition-3 bg-white-1 shadow-custom1 hover:bg-sec",
         {
           "shadow-[0px_4px_53px_0px_rgba(103,103,103,0.25)]": isHover === index,
+          
         },
       )}
     >

@@ -23,10 +23,10 @@ function HomeOneTeamCard({ image, name, title }: Props) {
       <div className="group relative bg-primary">
         <Image
           src={image}
-          width={352}
-          height={497}
+          width={100}
+          height={100}
           alt="Team one"
-          className="spx32px spt40px mx-auto block "
+          className="w-full block "
         />
         <div
           className={`theme-transition-4 absolute -bottom-7 right-6 z-20 w-fit rounded-full`}

@@ -1,35 +1,32 @@
-import SectionText from "@/components/shared/SectionText";
-import { cn } from "@/utils/cn";
-import { IconUsers } from "@tabler/icons-react";
-import Link from "next/link";
-import { ReactElement } from "react";
+
 import OurWorkCard from '@/pages/home-three/OurWorkCard'
 import SectionTitle from "@/components/shared/SectionTitle";
 import SectionSubTitle from "@/components/shared/SectionSubTitle";
+// import Service from "@/../../public/img/svg/customer-service.svg"
 
 const steps = [
   {
     step: "01",
     heading: "get a quote",
-    iconname: IconUsers,
+    iconname: '/img/svg/quote.png',
     text: "Start by contacting us for a free, personalized quote. Share your moving details."
   },
   {
     step: "02",
     heading: "plan your move",
-    iconname: IconUsers,
+    iconname: "/img/svg/customer.png",
     text: "Our team works with you to create a customized moving plan. From packing to logistics."
   },
   {
     step: "03",
     heading: "safe & secure moving",
-    iconname: IconUsers,
+    iconname: "/img/svg/box-carring.png",
     text: "Our expert movers handle your belongings with care, using high-quality packing materials."
   },
   {
     step: "04",
     heading: "unpack & settle in",
-    iconname: IconUsers,
+    iconname: "/img/svg/setting.png",
     text: "Once we've delivered your items, we'll help with unpacking and setting up, so you can enjoy."
   },
 ];
@@ -40,6 +37,7 @@ export default function OurWorks() {
       <div className="container  flex flex-col items-center justify-center ">
         <SectionSubTitle
         text="OUR WORK PROCESS"
+        className=" text-black-2"
         />
         <SectionTitle
         text="Reliable moving services built around you"

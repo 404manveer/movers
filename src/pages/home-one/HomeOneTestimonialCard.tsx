@@ -8,7 +8,7 @@ import {
 import Image, { StaticImageData } from "next/image";
 
 type Props = {
-  image: StaticImageData;
+  image: string;
   text: string;
   name: string;
   title: string;
@@ -23,7 +23,7 @@ const HomeOneTestimonialCard = ({ image, text, name, title }: Props) => {
           width={200}
           height={200}
           alt="Testimonial image"
-          className="rounded-full"
+          className="rounded-full w-[200px]  aspect-square object-cover object-center "
         />
         <div className="absolute -right-14 top-[50px] flex size-25 items-center justify-center rounded-full border-[6px] border-white-1 bg-accent-4">
           <IconQuote size={40} className="text-primary" />
@@ -43,7 +43,7 @@ const HomeOneTestimonialCard = ({ image, text, name, title }: Props) => {
         <div className=" flex items-center justify-between gap-6">
           <div>
             <p className="h4 font-medium">{name}</p>
-            <p className="m-text mt-1 font-medium text-black-3">{title}</p>
+            <p className="m-text mt-1 font-medium text-black-1">{title}</p>
           </div>
           <ButtonSlider />
         </div>

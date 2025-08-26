@@ -3,7 +3,7 @@ import  { v4 as uuidv4} from "uuid"
 export const navbar =[
     {id:uuidv4(),
      menuTitle:"Local removalists ",
-     path:"#", 
+     path:"/local-removalists", 
      menuItems:[
   {
     id: uuidv4(),
@@ -99,6 +99,48 @@ export const navbar =[
         id:uuidv4(),
         menuTitle:'Service',
         path:"#",
+        menuItems:[
+          {
+            id:uuidv4(),
+            title:' Moving OverSeas',
+            menuItemPath:"/moving-oversea"
+          },
+          {
+            id:uuidv4(),
+            title:' Corporate Relocations',
+            menuItemPath:"/corporate-relocations"
+          },
+          {
+            id:uuidv4(),
+            title:' Office Moves',
+            menuItemPath:"/office-moves"
+          },
+          {
+            id:uuidv4(),
+            title:' Storage',
+            menuItemPath:"/storage"
+          },
+          {
+            id:uuidv4(),
+            title:'  Packing & Unpacking',
+            menuItemPath:"/packing-unpacking"
+          },
+          {
+            id:uuidv4(),
+            title:'Removal Protection',
+            menuItemPath:"/removal-protection"
+          },
 
+        ]
+    },
+    {
+      id:uuidv4(),
+      menuTitle:'Blogs',
+      path:'/blogs',
+    },
+    {
+      id:uuidv4(),
+      menuTitle:'Contact Us',
+      path:'/contact',
     }
 ]
