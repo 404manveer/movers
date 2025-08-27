@@ -6,78 +6,47 @@ import CircleBottomLeft from "@/components/shared/CircleBottomLeft";
 import SectionSubTitle from "@/components/shared/SectionSubTitle";
 import SectionTitle from "@/components/shared/SectionTitle";
 import Image from "next/image";
-import { Autoplay, Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { sliderData } from "../../../public/data/ourTeamData";
-import HomeOneTeamCard from "@/pages/home-one/HomeOneTeamCard";
+// import {localCard}  from '../../../public/data/localCard'
+import SectionText from "@/components/shared/SectionText";
+import Card from './Card'
+const LocalType = ({localCard,title,subtitle,text,buttontext,buttonlink}) => {
 
-const LocalType = () => {
   return (
     <section className="spy120px relative overflow-clip bg-white-4">
       <div className="container flex justify-between gap-5 max-sm:flex-col sm:items-center sm:gap-6">
         <div>
-          <SectionSubTitle text="Our Team" />
+          <SectionSubTitle text={`${subtitle}`}/>
           <SectionTitle
-            text="We are Business Consulting Professionals"
+            text={`${title}`}
+            
             className="mt-3 max-w-[703px]"
           />
+          <SectionText text={`${text}`}/>
         </div>
-        <RoundedLink buttonText="Explore Now" link="/our-team" />
+        <RoundedLink buttonText={`${buttontext}`} link={buttonlink} />
+      </div>
+      <div className="container py-20 overflow-hidden " >
+
+        <div className=" grid grid-cols-1  items-center justify-center  md:grid-cols-2 lg:grid-cols-3 gap-6  " >
+          { localCard.map((item,id)=>{
+            return(
+              <Card key={id} {...item} />
+            )
+          })}
+
+        </div>
+
       </div>
 
-      <div className="relative max-xl:container xl:ml-[calc((100%-1296px)/2)]">
-        <div className="smt60px">
-          <Swiper
-            spaceBetween={24}
-            speed={1400}
-            loop={true}
-            modules={[Navigation, Autoplay]}
-            autoplay={{
-              delay: 3500,
-              disableOnInteraction: false,
-            }}
-            navigation={{
-              nextEl: ".customerSliderNext",
-              prevEl: ".customerSliderPrev",
-            }}
-            breakpoints={{
-              320: {
-                slidesPerView: 1,
-              },
-              768: {
-                slidesPerView: 2,
-              },
-              992: {
-                slidesPerView: 3,
-              },
-              1200: {
-                slidesPerView: 3,
-              },
-              1400: {
-                slidesPerView: 3.7,
-              },
-            }}
-          >
-            {sliderData.map((item, index) => (
-              <SwiperSlide
-                key={`team-card${index}`}
-                className="xl:even:mt-15 xxl:even:mt-[72px]"
-              >
-                <HomeOneTeamCard {...item} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </div>
+    
       <div>
-        <ButtonSlider className="smt60px mx-auto w-fit" />
       </div>
       <Image
         src={teamVector}
         width={146}
         height={154}
         alt="Team Vector"
-        className="left-5 top-5 max-3xl:size-20  max-md:hidden md:absolute 4xl:left-20 4xl:top-25"
+        className=" max-3xl:size-20  max-md:hidden m"
       />
       <CircleBottomLeft />
     </section>

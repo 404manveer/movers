@@ -6,7 +6,7 @@ import HomeOnePricingPlan from "@/pages/home-one/HomeOnePricingPlan";
 import HomeOneRecentBlog from "@/pages/home-one/HomeOneRecentBlog";
 import HomeTwoAboutUs from "@/pages/landing-two/HomeTwoAboutUs";
 import HomeTwoBanner from "@/pages/landing-two/HomeTwoBanner";
-import HomeTwoFaq from "@/pages/landing-two/HomeTwoFaq";
+import HomeTwoFaq from "@/pages/local/HomeTwoFaq";
 import HomeTwoFingertips from "@/pages/landing-two/HomeTwoFingertips";
 import HomeTwoPersonalized from "@/pages/landing-two/HomeTwoPersonalized";
 import HomeTwoServices from "@/pages/landing-two/HomeTwoServices";

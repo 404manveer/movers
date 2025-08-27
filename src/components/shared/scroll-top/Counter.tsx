@@ -24,7 +24,7 @@ const Counter = ({ value }: CounterProps) => {
   }, [inView, value]);
 
   return (
-    <span ref={ref}>
+    <span ref={ref} className="" >
       {inView ? <Odometer value={odometerValue} format="(,ddd).dd" /> : 0}
     </span>
   );

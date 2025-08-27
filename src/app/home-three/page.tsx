@@ -10,7 +10,7 @@ import HomeThreeBanner from "@/pages/home-three/HomeThreeBanner";
 import HomeThreeFinancialPlan from "@/pages/home-three/HomeThreeFinancialPlan";
 import HomeThreeService from "@/pages/home-three/HomeThreeService";
 import HomeThreeTestimonial from "@/pages/home-three/HomeThreeTestimonial";
-import HomeTwoFaq from "@/pages/landing-two/HomeTwoFaq";
+import HomeTwoFaq from "@/pages/local/HomeTwoFaq";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

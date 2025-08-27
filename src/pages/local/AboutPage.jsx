@@ -13,7 +13,7 @@ import Image from "next/image";
 const AboutLocal = () => {
   return (
     <section
-      className="spt120px fade-wrapper spb120px relative overflow-hidden"
+      className="spt80px fade-wrapper spb120px relative overflow-hidden"
       id="scrollPosition"
     >
       <div className="container grid grid-cols-12 items-center gap-6">
@@ -35,7 +35,7 @@ const AboutLocal = () => {
               alt="Mission image two"
               className="appear-down xl:-ms-25  h-[350px] object-cover xl:max-w-[unset] "
             />
-            <div className="d1 font-semibold text-primary">
+            <div className="d3 font-semibold text-primary">
               <Counter value={80} />+
             </div>
             <p className="xl-text text-black-1">Family choose us</p>

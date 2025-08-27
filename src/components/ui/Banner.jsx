@@ -1,26 +1,24 @@
 import Link from "next/link";
-import Breadcrumbs from "../shared/Breadcrumbs";
 import { IconArrowDown, IconChevronsRight } from "@tabler/icons-react";
 import HomeThreeBannerLink from "@/pages/home-three/HomeThreeBannerLink";
 
 
 
-export default function Banner({imgpath,pagename,pagepath}){
+export default function Banner({imgpath,pagename,pagepath,text}){
     return(
           <section
           style={{backgroundImage:`url(${imgpath})`}}
           
-          className="fade-wrapper homebanner relative overflow-hidden bg-sec  bg-cover bg-center  object-cover p-[108px] md:m-5  md:mt-25 md:rounded-3xl before:absolute before:inset-0 before:bg-black-1/60  xxl:mx-6">
-      <div className="container relative  p-20 text-white-1 sm:pt-25 ">
+          className="fade-wrapper homebanner relative overflow-hidden bg-sec  bg-cover bg-center  object-cover md:p-[108px] md:m-5  md:mt-25 md:rounded-3xl before:absolute before:inset-0 before:bg-black-1/60  xxl:mx-6">
+      <div className="container relative py-20 md:p-20 text-white-1 sm:pt-25  ">
          
-        <div className="grid grid-cols-12 place-items-center">
-          <div className="max-md:spt60px  col-start-1 col-end-13 flex-center  flex-col text-center   ">
+        <div className=" place-items-center  ">
+          <div className="max-md:spt60px  flex-center  flex-col text-center   ">
             <h1 className="d4 title-animation mt-3 font-medium   ">
             {pagename}
             </h1>
-            <p className="xl-text smt24px fade-top text-white-4 ">
-              Banking is the practice of accepting and safeguarding money owned
-              and then to earn a profit.
+            <p className="xl-text smt24px  text-white-4  ">
+             {text}
             </p>
             <div className="smt40px flex items-center gap-5 max-xs:flex-wrap fade-top  justify-center">
               <HomeThreeBannerLink href="/signup">Open Account</HomeThreeBannerLink>
@@ -28,12 +26,12 @@ export default function Banner({imgpath,pagename,pagepath}){
             </div>
           </div>
         </div>
-       <div className=" absolute bottom-0 right-10">
+       <div className=" hidden absolute bottom-0 right-10">
            <Link
             href="#scrollPosition"
             className="alter-btn btn-anim group/link relative z-10 inline-flex size-[140px] items-center justify-center gap-4 overflow-hidden rounded-full border border-[var(--primary)]  font-semibold text-[var(--primary)] hover:border-[var(--primary)] hover:text-black-4 "
           >
-            <div className="flex flex-col items-center justify-center">
+            <div className=" hid flex flex-col  items-center justify-center">
               <p className="capitalize">Scroll Down</p>
               <IconArrowDown size={32} stroke={1} className="max-sm:size-8" />
             </div>

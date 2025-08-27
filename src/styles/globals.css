@@ -143,6 +143,9 @@ body {
   .spt120px {
     @apply pt-15 md:pt-20 xl:pt-24 xxl:pt-30;
   }
+  .spt80px {
+    @apply pt-8 md:pt-10 xl:pt-14 ;
+  }
   .spb120px {
     @apply pb-15 md:pb-20 xl:pb-24 xxl:pb-30;
   }

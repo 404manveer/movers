@@ -8,7 +8,7 @@ export const navbar =[
   {
     id: uuidv4(),
     title: "Sydney Removalists",
-    menuItemPath: "/removalists/sydney",
+    menuItemPath: "/local-removalists/sydney-removalists",
   },
   {
     id: uuidv4(),

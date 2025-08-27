@@ -16,7 +16,7 @@ const Breadcrumbs = ({ pageName, pageLink }: Props) => {
          
            
             <div className="xl-text  flex items-center gap-2">
-              <span className= " text-[var(--primary)] text-2xl ">Here you are: </span><Link href={`/`}>Home</Link>
+              <span className= " text-[var(--primary)] xl-text ">Here you are: </span><Link href={`/`}>Home</Link>
               <IconChevronsRight />
               <Link href={`${pageLink}`} className="capitalize text-zinc-400">
                 {pageName}

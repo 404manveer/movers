@@ -4,7 +4,7 @@ import SectionSubTitle from "@/components/shared/SectionSubTitle";
 import SectionTitle from "@/components/shared/SectionTitle";
 import { useState } from "react";
 import { faqData } from "../home-one/HomeOneFaq";
-import HomeTwoSingleFaq from "./HomeTwoSingleFaq";
+import HomeTwoSingleFaq from "../landing-two/HomeTwoSingleFaq";
 
 const HomeTwoFaq = () => {
   const [dropDown, setDropDown] = useState("");
